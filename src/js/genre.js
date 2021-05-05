@@ -1,6 +1,6 @@
 const genres = [
   {
-    id: 28,
+    id: 1,
     name: "Action",
   },
   {
