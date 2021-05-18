@@ -45,3 +45,38 @@ const fetchAnime = async (query) => {
 fetchAnime();
 return setAnimeList;
 animeList();
+
+
+
+
+
+
+const something = async function(){
+  try{
+    const response = await fetch('https://api.jikan.moe/v3/search/anime?status=completed');
+    const data = await response.json();
+    data.results.forEach((anime) => {
+      DOMSelectors.grid.insertAdjacentHTML("beforeend",
+      `  <div class="anime-card">
+      <div class="anime-card-front">
+        <img
+          src="https://placehold.it/150x250"
+          alt=""
+          class="poster"
+        />
+      </div>
+      <div class="anime-card-back">
+        <h3 class="anime-card-header">${anime.title}</h3>
+        <div class="release-box">
+          <p class="release-date">Released</p>
+          <p class="release-date">${anime.start_date}</p>
+        </div>
+      </div>
+    </div> `);
+    });
+  } catch (error) {
+    console.log(error);
+    alert("something wrong");
+  }
+};
+something();

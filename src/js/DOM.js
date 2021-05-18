@@ -7,6 +7,7 @@ const DOMSelectors = {
   searchButton: document.getElementById("submit-btn"),
   searchResult: document.getElementById("results"),
   cardTemplate: document.getElementById("animeCard"),
+  categoryCompleted: document.getElementById("completed")
 };
 
 export { DOMSelectors };
