@@ -46,21 +46,17 @@ import { genres } from "./genre";
 // return setAnimeList;
 // animeList();
 
-
-
-
-
-
-const completed = async function(){
-  try{
+const completed = async function () {
+  try {
     const response = await fetch(
-      'https://api.jikan.moe/v3/search/anime?status=completed'
-      );
+      "https://api.jikan.moe/v3/search/anime?status=completed"
+    );
     const data = await response.json();
     console.log(data.results);
     data.results.forEach((anime) => {
-     DOMSelectors.completed.insertAdjacentHTML("beforeend",
-      `  <div class="anime-card">
+      DOMSelectors.completed.insertAdjacentHTML(
+        "beforeend",
+        `  <div class="anime-card">
       <div class="anime-card-front">
         <img
           src="${anime.image_url}"
@@ -75,7 +71,8 @@ const completed = async function(){
           <p class="release-date">${anime.start_date}</p>
         </div>
       </div>
-    </div> `);
+    </div> `
+      );
     });
   } catch (error) {
     console.log(error);
@@ -84,18 +81,17 @@ const completed = async function(){
 };
 completed();
 
-
-
-const highest = async function(){
-  try{
+const highest = async function () {
+  try {
     const response = await fetch(
-      'https://api.jikan.moe/v3/search/anime?order_by=score'
-      );
+      "https://api.jikan.moe/v3/search/anime?order_by=score"
+    );
     const data = await response.json();
     console.log(data.results);
     data.results.forEach((anime) => {
-     DOMSelectors.highestRated.insertAdjacentHTML("beforeend",
-      `  <div class="anime-card">
+      DOMSelectors.highestRated.insertAdjacentHTML(
+        "beforeend",
+        `  <div class="anime-card">
       <div class="anime-card-front">
         <img
           src="${anime.image_url}"
@@ -110,7 +106,8 @@ const highest = async function(){
           <p class="release-date">${anime.start_date}</p>
         </div>
       </div>
-    </div> `);
+    </div> `
+      );
     });
   } catch (error) {
     console.log(error);
@@ -119,3 +116,38 @@ const highest = async function(){
 };
 highest();
 //coudlnt find parameter specifically for highest rated
+
+const airing = async function () {
+  try {
+    const response = await fetch(
+      "https://api.jikan.moe/v3/search/anime?status=airing&order_by=score&sort=desc&limit="
+    );
+    const data = await response.json();
+    console.log(data.results);
+    data.results.forEach((anime) => {
+      DOMSelectors.airing.insertAdjacentHTML(
+        "beforeend",
+        `  <div class="anime-card">
+      <div class="anime-card-front">
+        <img
+          src="${anime.image_url}"
+          alt=""
+          class="poster"
+        />
+      </div>
+      <div class="anime-card-back">
+        <h3 class="anime-card-header">${anime.title}</h3>
+        <div class="release-box">
+          <p class="release-date">Released</p>
+          <p class="release-date">${anime.start_date}</p>
+        </div>
+      </div>
+    </div> `
+      );
+    });
+  } catch (error) {
+    console.log(error);
+    alert("something wrong");
+  }
+};
+airing();

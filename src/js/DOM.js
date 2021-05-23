@@ -9,6 +9,7 @@ const DOMSelectors = {
   cardTemplate: document.getElementById("animeCard"),
   completed: document.getElementById("completed"),
   highestRated: document.getElementById("highest"),
+  airing: document.getElementById("top-airing"),
 };
 
 export { DOMSelectors };
