@@ -120,7 +120,7 @@ highest();
 const airing = async function () {
   try {
     const response = await fetch(
-      "https://api.jikan.moe/v3/search/anime?status=airing&order_by=score&sort=desc&limit="
+      "https://api.jikan.moe/v3/search/anime?status=airing&order_by=score&sort=desc&limit=30"
     );
     const data = await response.json();
     console.log(data.results);

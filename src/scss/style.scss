@@ -1,3 +1,8 @@
+@use "_search.scss";
+$font-main: "Asap",serif;
+$font-second: "Joesfin Slab", serif;
+
+
 html,
 body {
   box-sizing: border-box;
@@ -6,6 +11,9 @@ body {
   padding: 0;
   margin: 0;
   font-size: 62.5%;
+  font-family: $font-second;
+  font-weight: 500;
+  background-color: yellow;
 }
 
 .container {

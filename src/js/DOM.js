@@ -10,6 +10,9 @@ const DOMSelectors = {
   completed: document.getElementById("completed"),
   highestRated: document.getElementById("highest"),
   airing: document.getElementById("top-airing"),
+  grid: document.querySelector(".anime-grid"),
+  searchForm: document.getElementById("searchForm"),
+  searchArea: document.getElementById("search-area"),
 };
 
 export { DOMSelectors };
