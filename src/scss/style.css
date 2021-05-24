@@ -1,3 +1,4 @@
+@use "_search.scss";
 html,
 body {
   -webkit-box-sizing: border-box;
@@ -7,6 +8,9 @@ body {
   padding: 0;
   margin: 0;
   font-size: 62.5%;
+  font-family: "Joesfin Slab", serif;
+  font-weight: 500;
+  background-color: gray;
 }
 
 .container {
@@ -33,7 +37,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 1rem;
-  background-color: blue;
+  background-color: white;
+}
+
+.navcategory {
+  color: white;
 }
 
 .header {
@@ -44,7 +52,7 @@ body {
 
 .search-box {
   width: 20rem;
-  background-color: #bebebe;
+  background-color: white;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -55,13 +63,26 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: blue;
+  background-color: #45455d;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.search-header-link {
+  width: 100%;
+  height: auto;
+  font-size: 3rem;
+  margin: 5rem;
+}
+
+.anime-card-back {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 /*
