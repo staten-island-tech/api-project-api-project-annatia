@@ -11,7 +11,7 @@ const DOMSelectors = {
   highestRated: document.getElementById("highest"),
   airing: document.getElementById("top-airing"),
   grid: document.querySelector(".anime-grid"),
-  searchForm: document.getElementById("searchForm"),
+  searchForm: document.getElementById("search-form"),
   searchArea: document.getElementById("search-area"),
 };
 

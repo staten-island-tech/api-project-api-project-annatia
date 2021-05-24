@@ -9,7 +9,7 @@ const listen = function () {
     const searchQuery = async function () {
       try {
         const response = await fetch(
-          "https://api.jikan.moe/v3/search/anime?q=${searchParams}"
+          `https://api.jikan.moe/v3/search/anime?q=${searchParams}`
         );
         const data = await response.json();
         console.log(data.results);
