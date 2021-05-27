@@ -1,140 +1,73 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&family=Josefin+Slab:ital,wght@0,300;0,400;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="scss/style.scss" />
-  </head>
-  <body>
-    <h1 class="header">MyAnimeList API</h1>
-    <h2 class="top-rated">Top Rated Anime</h2>
-    <section class="anime-grid">
-      <div class="anime-card">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Anime API</title>
+
+  <link rel="stylesheet" href="scss/style.scss" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">  
+    <header class="header">Anime API List</header>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#top-airing" class="text">Top Airing Anime</a>
+        <a href="#highest" class="text">Highest Rated</a>
+        <a href="#completed" class="text">Completed</a>
+      </nav>
+    </div>
+    <div class="other-container">
+      <section class="anime-grid">
+        <a href="search.html" class="search-header-link">
+          Looking for something specific
+        </a>
+      </section>
+      <section class="category category1">
+        <h1 class="navcategory">Top Airing Anime</h1>
+        <section class="grid" id="top-airing"></section>
+      </section>
+      <section class="category category2">
+        <h1 class="navcategory">Highest Rated</h1>
+        <section class="grid" id="highest"></section>
+      </section>
+      <section class="category category3">
+        <h1 class="navcategory">Completed</h1>
+        <section class="grid"  id="completed">
+                <!--  <div class="anime-card">
         <div class="anime-card-front">
           <img
-            src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg?s=faffcb677a5eacd17bf761edd78bfb3f"
+            src="https://placehold.it/150x250"
             alt=""
             class="poster"
           />
         </div>
         <div class="anime-card-back">
-          <h3 class="anime-card-header">Fullmetal Alchemist: Brotherhood</h3>
+          <h3 class="anime-card-header">The Dark Knight</h3>
           <div class="score-box">
             <p class="user-score">Community Score</p>
-            <p class="user-score">9.18</p>
+            <p class="user-score">8.4</p>
           </div>
-
           <div class="release-box">
             <p class="release-date">Released</p>
-            <p class="release-date">2009-04-05</p>
+            <p class="release-date">2020-06-12</p>
           </div>
-
-          <div class="anime-genres">
-            <li class="anime-genre">Action</li>
-            <li class="anime-genre">Military</li>
-            <li class="anime-genre">Adventure</li>
-            <li class="anime-genre">Comedy</li>
-            <li class="anime-genre">Drama</li>
-            <li class="anime-genre">Magic</li>
-            <li class="anime-genre">Fantasy</li>
-            <li class="anime-genre">Shounen</li>
+          <div class="movie-genres">
+            <li class="movie-genre">Sci-Fi</li>
+            <li class="movie-genre">Fantasy</li>
+            <li class="movie-genre">Horror</li>
           </div>
         </div>
-      </div>
-      <div class="anime-card">
-        <div class="anime-card-front">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/5/73199.jpg?s=97b97d568f25a02cf5a22dda13b5371f"
-            alt=""
-            class="poster"
-          />
-        </div>
-        <div class="anime-card-back">
-          <h3 class="anime-card-header">Steins;Gate</h3>
-          <div class="score-box">
-            <p class="user-score">Community Score</p>
-            <p class="user-score">9.11</p>
-          </div>
+      </div> -->
+        </section>
+      </section>
+    </div>
+    <nav>
+  </div>
 
-          <div class="release-box">
-            <p class="release-date">Released</p>
-            <p class="release-date">2011-04-06</p>
-          </div>
+  <script src="js/index.js"></script>
+</body>
 
-          <div class="anime-genres">
-            <li class="anime-genre">Sci Fi</li>
-            <li class="anime-genre">Psychological</li>
-            <li class="anime-genre">Drama</li>
-            <li class="anime-genre">Thriller</li>
-          </div>
-        </div>
-      </div>
-      <div class="anime-card">
-        <div class="anime-card-front">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/3/72078.jpg?s=e9537ac90c08758594c787ede117f209"
-            alt=""
-            class="poster"
-          />
-        </div>
-        <div class="anime-card-back">
-          <h3 class="anime-card-header">Gintama°</h3>
-          <div class="score-box">
-            <p class="user-score">Community Score</p>
-            <p class="user-score">9.09</p>
-          </div>
-
-          <div class="release-box">
-            <p class="release-date">Released</p>
-            <p class="release-date">2015-04-08</p>
-          </div>
-
-          <div class="anime-genres">
-            <li class="anime-genre">Samurai</li>
-            <li class="anime-genre">Historical</li>
-            <li class="anime-genre">Shounen</li>
-            <li class="anime-genre">Action</li>
-            <li class="anime-genre">Comedy</li>
-            <li class="anime-genre">Parody</li>
-            <li class="anime-genre">Sci Fi</li>
-          </div>
-        </div>
-      </div>    
-      <div class="anime-card">
-        <div class="anime-card-front">
-          <img
-            src="https://cdn.myanimelist.net/images/anime/11/33657.jpg?s=5724d8c22ae7a1dad72d8f4229ef803f"
-            alt=""
-            class="poster"
-          />
-        </div>
-        <div class="anime-card-back">
-          <h3 class="anime-card-header">Hunter x Hunter (2011)</h3>
-          <div class="score-box">
-            <p class="user-score">Community Score</p>
-            <p class="user-score">9.08</p>
-          </div>
-
-          <div class="release-box">
-            <p class="release-date">Released</p>
-            <p class="release-date">2011-10-02</p>
-          </div>
-
-          <div class="anime-genres">
-            <li class="anime-genre">Action</li>
-            <li class="anime-genre">Adventure</li>
-            <li class="anime-genre">Fantasy</li>
-            <li class="anime-genre">Shounen</li>
-            <li class="anime-genre">Super Power</li>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script src="js/index.js"></script>
-  </body>
 </html>
