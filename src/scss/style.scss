@@ -1,6 +1,8 @@
 @use "_search.scss";
 $font-main: "Asap", serif;
 $font-second: "Joesfin Slab", serif;
+$colorOne: rgb(41, 76, 90);
+$colorTwo: rgb(193, 220, 203);
 
 html,
 body {
@@ -12,7 +14,7 @@ body {
   font-size: 62.5%;
   font-family: $font-second;
   font-weight: 500;
-  background-color: gray;
+  background-color: rgb(111, 136, 145);
 }
 
 .container {
@@ -24,23 +26,47 @@ body {
   text-align: center;
 }
 
+
 .navbar {
-  width: 100%;
+  width: 55rem;
+  height: 3rem;
+  border-radius: 1rem;
   font-size: 2rem;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-evenly;
   margin: 1rem;
   background-color: white;
+  padding: .5rem;
+
+}
+
+.anime-grid{
+  margin: 2rem;
+}
+
+a{
+  color: $colorOne;
+  font-style: italic;
 }
 
 .navcategory {
   color: white;
+  font-size: 2rem;
+  height: 3rem;
 }
 
 .header {
   width: 100%;
   font-size: 4rem;
-  margin: 5px;
+  margin-bottom: 5rem;
+  background-color: $colorTwo;
+  height: 10rem;
+  padding-top: 4rem;
+  text-decoration: underline;
+  border-radius:  0rem 0rem 2rem 2rem;
+  color: $colorOne;
 }
+
 
 .search-box {
   width: 20rem;
